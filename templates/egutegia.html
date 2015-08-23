@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block eduki_nagusia %}
+
+<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper body-wrapper">		
+		<div class="wrapper ad-pad clearfix">
+				
+			<div class="main-content col-1-1">
+				<h1>Egutegia</h1>
+				<p>Triatloiarekin eta bereziki gure talearekin zerikusia duten eta gure taldekideak presente egon daitezkeen egun bereziak azaltzen dira bertan.</p>
+				
+			
+				
+				<!-- Responsive Table Heading Labels -->
+				<style>
+					@media only screen and (max-width: 767px) {
+					td:nth-of-type(1):before { content: "Astelehena"; }
+					td:nth-of-type(2):before { content: "Asteartea"; }
+					td:nth-of-type(3):before { content: "Asteazkena"; }
+					td:nth-of-type(4):before { content: "Osteguna"; }
+					td:nth-of-type(5):before { content: "Ostirala"; }
+					td:nth-of-type(6):before { content: "Larunbata"; }
+					td:nth-of-type(7):before { content: "Igandea"; }
+					}
+				</style>
+				
+				
+				<!-- Time Table -->	
+				<div class="evt-month clearfix">
+					<h3 class="left"><span>{{current|date:"F Y"}}</span></h3>
+					<ul class="right inline-list">
+						<li><a href="{% url 'egutegiaparam' prev|date:'Y' prev|date:'m' %}" class="btn-3 small-btn"><em class="fa fa-angle-left"></em> {{prev|date:"F"}}</a></li>
+						<li><a href="{% url 'egutegiaparam' next|date:'Y' next|date:'m' %}" class="btn-3 small-btn">{{next|date:"F"}} <em class="fa fa-angle-right"></em></a></li>
+					</ul>	
+				</div>
+				
+				
+				<table class="event-table tt-1">
+					<thead>
+					<tr>
+						<th>Astelehena</th>
+						<th>Asteartea</th>
+						<th>Asteazkena</th>
+						<th>Osteguna</th>
+						<th>Ostirala</th>
+						<th>Larunbata</th>
+						<th>Igandea</th>
+					</tr>
+					</thead>
+					<tbody>
+						{% for semana in calendario %}
+							<tr>
+								{% for dia in semana %}
+									<td class="{% if dia == today %}current-day{% endif %}
+									{% for gertaera in gertaerak %}
+										{% if dia|date:'d' == gertaera.ordua|date:'d' %}
+											active-time
+										{% endif %}
+									{% endfor %}"><div class="evt"><b>{{dia|date:"d"}}</b>
+									{% for gertaera in gertaerak %}
+										{% if dia|date:"d" == gertaera.ordua|date:"d" %}
+											<a class="tooltip" title="
+											<img class='col-1-1' src='{{MEDIA_URL}}{{gertaera.mota.irudia}}'/>
+											<h5 class='tt-tile'>{{gertaera.izena}}</h5>
+											<h6 class='tt-date'>{{gertaera.ordua}}</h6> 
+											<p>{{gertaera.textua|safe|slice:'72'}}</p>
+											" href="{% url 'gertaera' gertaera.slug %}">{{gertaera.izena}}</a><br/>
+										{% endif %}
+									{% endfor %}</div>
+									</td>
+								{% endfor %}
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>		
+				<!-- Finish Main Content -->
+			</div>
+			
+			
+			
+		</div>
+	</div>
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper breadcrumb-wrapper">		
+		<div class="wrapper">
+			<a href="{% url 'index' %}" class="fa">&#xf015;</a> <a href="{% url 'index' %}">Home</a> <a href="#">Egutegia</a> 
+		</div>
+	</div>
+	    	
+
+
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block eduki_nagusia %}
+
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper body-wrapper">
+	
+
+		<div class="wrapper blog-roll ad-pad clearfix">
+		
+			<!-- Start Main Column  -->
+			<div class="col-3-4">
+			
+				<div class="clearfix post">
+					
+					
+					<h1 class="title">Aloña Mendi Triatloi Taldea</h1>
+					
+					<div class="mosaic-block circle">
+						<a href="{{STATIC_URL}}img/taldea.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="2011ko Oñatiko Triatloi Taldearen aurkezpena"></a>
+						<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/taldea.jpg" alt="Taldeko Argazkia" /></div>
+					</div>
+					
+					<p class="lead"><b>Oñatiko Triatloi Taldea</b> bezela hasi genuen gure ibilbidea, eta gaur egun <b>Aloña Mendi</b>ko sail baten bihurtu gara, bide berdinetik jarraitu ahal izateko</p>
+
+					<div class="col-2-5 mosaic-block circle right last pad-left">
+						<a href="{{STATIC_URL}}img/duatloia_goitik.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Oñatiko Duatloia 2011"></a>
+							<div class="mosaic-backdrop"><img class="" src="{{STATIC_URL}}img/duatloia_goitik.jpg" alt="Oñatiko Duatloia" /></div>
+							<span class="wp-caption-text">Oñatiko Duatloia 2011</span>
+					</div>
+					
+					<p>Orain taldearean hasierako urteetako informazioa biltzen hari gara, bertan gure historia osoa idatzi ahal izateko.</p>
+
+					<p>Hori bai, taldearen lerro garrantzitsuenak idaztear daude ;)</p>
+					
+					
+					
+					
+					
+					
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+						 	    
+				
+				
+			</div>
+			
+			
+			
+			
+			
+			<!-- Start Right Sidebar  -->
+			<aside class="col-1-4 right last">
+				<div class="widget">
+				    <h3 class="widget-title">Datozen Hitzorduak</h3>
+				    <ul class="list-1 widget-list">
+				    	{% for gertaera in gertaerak %}
+					    	<li><a href="{% url 'gertaera' gertaera.slug %}">{{gertaera.izena}}</a></li>
+					    {% empty %}
+							<li><i>Ez dago hitzordurik</i></li>
+						{% endfor %}
+				    </ul>
+			    </div>
+
+			    <div class="widget">
+				    <h3 class="widget-title">Azkenengo Berriak</h3>
+				    <ul class="list-1 widget-list">
+						{% for post in postak %}
+					    	<li><a href="{% url 'post' post.slug %}">{{post.izenburua}}</a></li>
+					    {% empty %}
+							<li><i>Ez dago berririk</i></li>
+						{% endfor %}
+				    </ul>
+			    </div>
+			    
+			</aside>
+			
+			
+			
+		</div>
+	</div>
+    	
+    	
+    	
+    	
+    
+   
+    	
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper breadcrumb-wrapper">		
+		<div class="wrapper">
+			<a href="{% url 'index' %}" class="fa">&#xf015;</a> <a href="{% url 'index' %}">Hasiera</a> <a href="#">Taldea</a> 
+		</div>
+	</div>
+	
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block eduki_nagusia %}
+    	
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper body-wrapper">		
+		<div class="wrapper ad-pad blog-roll clearfix">
+		
+			<!-- Start Main Column  -->
+			<div class="col-1-1">
+			
+			{% for post in posts %}
+				 <!-- Start post -->
+		 	     <div class="post-excerpt clearfix">
+		 	     	<div class="col-1-3 mosaic-block circle">
+		 	     		<a href="{% url 'post' post.slug %}" class="mosaic-overlay link" title="{{post.izenburua}}"></a><div class="mosaic-backdrop">
+		 	     		<img src="{{MEDIA_URL}}{{post.irudi_nagusia}}" alt="{{post.izenburua}}" /></div>
+		 	     	</div>
+		 	     	
+		 	     	<div class="col-2-3 last">
+		 	    	    	<h3><a href="{% url 'post' post.slug %}">{{post.izenburua}}</a></h3>
+		 	    	    	<p class="lead">{{post.edukia|safe|slice:":200"}}
+		 	    	    	&#8230;<a href="{% url 'post' post.slug %}" class="read-more">Gehiago</a></p>
+		 	     	</div>
+		 	     </div>
+			{% endfor%}
+				
+				<!-- Start Pagination -->
+				<div class="clearfix">
+					<ul class="pagination">
+						<li class="left stay">
+							{% if page_obj.has_previous %}
+								<a href="?page={{ page_obj.previous_page_number }}"><span class="fa">&#xf104;</span> Aurrekoa</a>
+							{% endif %}
+						</li>
+
+						<li class="right stay">
+							{% if page_obj.has_next %}
+								<a href="?page={{ page_obj.next_page_number }}">Hurrengoa <span class="fa">&#xf105;</span> </a>
+							{% endif %}
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			
+			
+			
+			
+		</div>
+	</div>
+    	
+    <!-- Start Outter Wrapper -->
+	<div class="outter-wrapper breadcrumb-wrapper">		
+		<div class="wrapper">
+			<a href="{% url 'index' %}" class="fa">&#xf015;</a> <a href="{% url 'index' %}">Home</a> <a href="#">Berriak</a>
+		</div>
+	</div>
+
+
+{% endblock %}

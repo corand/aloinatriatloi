@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block eduki_nagusia %}
+
+    	
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper body-wrapper">		
+		<div class="wrapper blog-roll ad-pad clearfix">
+		
+			<!-- Start Main Column  -->
+			<div class="col-3-4">
+			
+				<div class="clearfix post">
+					
+					
+					
+
+					<h1 class="title">{{post.izenburua}}</h1>
+					
+					<div class="mosaic-block circle">
+						<a href="{% url 'post' post.slug %}" class="mosaic-overlay link" title="{{post.izenburua}}"></a><div class="mosaic-backdrop">
+						<img src="{{MEDIA_URL}}{{post.irudi_nagusia}}" alt="{{post.izenburua}}" /></div>
+					</div>
+					<h6 class="meta"><a class="date" href="#">{{post.data|date:"o F d"}}</a></h6>
+					
+					{{post.edukia|safe}}
+
+				</div>
+			
+				
+				
+				
+				
+				
+				
+				
+				<!-- Start Tags -->
+				<ul class="post-tag-cloud">
+					{% for tag in post.etiketak.all %}
+					 	<li><a href="#">{{tag}}</a></li>    
+					{% endfor %}
+				</ul>
+				
+				
+				
+				<!-- Start Paging -->
+				<div class="paging clearfix">
+					
+					{% if post.get_prev %}
+						<div class="col-1-2 prev">
+							<div class="meta">Aurrekoa</div>
+							<a href="{% url 'post' post.get_prev.slug %}"><h4>{{post.get_prev}}</h4></a>
+						</div>
+					{% else %}
+						<div class="col-1-2"></div>
+					{% endif %}
+					
+					
+					{% if post.get_next %}
+						<div class="col-1-2 next last">
+							<div class="meta">Hurrengoa</div>
+							<a href="{% url 'post' post.get_next.slug %}"><h4>{{post.get_next}}</h4></a>
+						</div>
+					{% endif %}
+				</div>
+				
+				
+			</div>
+
+
+
+			<aside class="col-1-4 right last">
+				<div class="widget">
+				    <h3 class="widget-title">Azkenengo berriak</h3>
+				    <ul class="list-1 widget-list">
+				    	{% for p in postak %}
+					    	<li><a href="{% url 'post' p.slug %}">{{p.izenburua}}</a></li>
+					    {% empty %}
+							<li><i>Ez dago berririk</i></li>
+						{% endfor %}
+				    </ul>
+			    </div>
+
+
+		</div>
+	</div>
+
+
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper breadcrumb-wrapper">		
+		<div class="wrapper">
+			<a href="{% url 'index' %}" class="fa">&#xf015;</a> <a href="{% url 'index' %}">Home</a> <a href="{% url 'blog' %}">Berriak</a> <a href="#">{{post.izenburua}}</a> 
+		</div>
+	</div>
+
+
+{% endblock %}

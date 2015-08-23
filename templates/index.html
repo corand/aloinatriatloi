@@ -1,0 +1,387 @@
+{% extends 'base.html' %}
+
+{% block eduki_nagusia %}
+
+	<!-- Revolution Slider -->
+	<div class="tp-banner-container">
+		<div class="tp-banner" >
+			<ul>
+					
+				<!-- SLIDE  -->
+				<li data-transition="fade" data-masterspeed="500" >
+					<!-- MAIN IMAGE -->
+					<img src="{{STATIC_URL}}img/mock.jpg" alt="Slider Image 1" data-bgposition="left center" data-kenburns="on" data-duration="14000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="130" data-bgpositionend="right center">
+					<!-- LAYERS -->
+					<!-- LAYER NR. 1 -->
+					<div class="tp-caption fadeout sfr sport-rs-boxed sport-rs-heading"
+						data-x="0" data-hoffset="0"
+						data-y="155" data-voffset="0"
+						data-captionhidden="off"
+						data-speed="800"
+						data-start="500"
+						data-easing="Power4.easeInOut"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.05"
+						data-endelementdelay="0.1"
+						data-endspeed="1000"
+						data-endeasing="Power1.easeOut">
+						Triatloia, taldekako kirola<br/> 
+						ere izan daiteke <div>- ALOÑA MENDI</div>
+					</div>
+					
+					<!-- LAYER NR. 2 -->
+					<div class="tp-caption fadeout sfr sport-rs-boxed sport-rs-text"
+						data-x="0" data-hoffset="0"
+						data-y="280" data-voffset="0"
+						data-captionhidden="off"
+						data-speed="800"
+						data-start="750"
+						data-easing="Power4.easeInOut"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.05"
+						data-endelementdelay="0.1"
+						data-endspeed="1000"
+						data-endeasing="Power1.easeOut">
+						Taldean entrenatuz,<br/> 
+						lehiatuz<br/>
+				        etab... 
+					</div>
+					
+					<!-- LAYER NR. 3 -->
+					<div class="tp-caption fadeout sfr tp-resizeme"
+						data-x="0" data-hoffset="0"
+						data-y="400" data-voffset="0"
+						data-speed="800"
+						data-start="1000"
+						data-easing="Power4.easeInOut"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.05"
+						data-endelementdelay="0.1"
+						data-endspeed="1000"
+						data-endeasing="Power1.easeOut">
+						<a class="btn" href="{% url 'harremana' %}">Bat egin</a>&nbsp; <a class="btn-2" href="{% url 'taldea' %}">Irakurri gehiago</a>
+					</div>
+				</li>
+				
+				<!-- SLIDE  -->
+				<li data-transition="fade" data-masterspeed="500" >
+					<!-- MAIN IMAGE -->
+					<img src="{{STATIC_URL}}img/mock2.jpg" alt="Slider Image 1" data-bgposition="left center" data-kenburns="on" data-duration="14000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="130" data-bgpositionend="right center">
+					<!-- LAYERS -->
+					<!-- LAYER NR. 1 -->
+					<div class="tp-caption fadeout sfr sport-rs-boxed sport-rs-heading"
+						data-x="0" data-hoffset="0"
+						data-y="155" data-voffset="0"
+						data-captionhidden="off"
+						data-speed="800"
+						data-start="500"
+						data-easing="Power4.easeInOut"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.05"
+						data-endelementdelay="0.1"
+						data-endspeed="1000"
+						data-endeasing="Power1.easeOut">
+						Triatloia, taldekako kirola<br/> 
+						ere izan daiteke <div>- ALOÑA MENDI</div>
+					</div>
+					
+					<!-- LAYER NR. 2 -->
+					<div class="tp-caption fadeout sfr sport-rs-boxed sport-rs-text"
+						data-x="0" data-hoffset="0"
+						data-y="280" data-voffset="0"
+						data-captionhidden="off"
+						data-speed="800"
+						data-start="750"
+						data-easing="Power4.easeInOut"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.05"
+						data-endelementdelay="0.1"
+						data-endspeed="1000"
+						data-endeasing="Power1.easeOut">
+						Taldean entrenatuz,<br/> 
+						lehiatuz<br/>
+				        etab... 
+					</div>
+					
+					<!-- LAYER NR. 3 -->
+					<div class="tp-caption fadeout sfr tp-resizeme"
+						data-x="0" data-hoffset="0"
+						data-y="400" data-voffset="0"
+						data-speed="800"
+						data-start="1000"
+						data-easing="Power4.easeInOut"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.05"
+						data-endelementdelay="0.1"
+						data-endspeed="1000"
+						data-endeasing="Power1.easeOut">
+						<a class="btn" href="{% url 'harremana' %}">Bat egin</a>&nbsp; <a class="btn-2" href="{% url 'taldea' %}">Irakurri gehiago</a>
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+		
+    	
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper body-wrapper">		
+		<div class="wrapper ad-pad clearfix">
+			
+			<!-- Column -->
+			<div class="col-1-4">
+				<h3>Gure Taldea</h3>
+				<p class="lead">Oñatiko Triatloi Taldea bezela hasi genuen gure ibilbidea, eta gaur egun Aloña Mendiko sail baten bihurtu gara, bide berdinetik jarraitu ahal izateko</p>
+				<p>Orain taldearean hasierako urteetako informazioa biltzen hari gara, bertan gure historia osoa 
+				&#8230;<a class="read-more" href="about.html">Gehiago</a></p>    					
+			</div>
+			
+			
+			<!-- Column -->
+			<div class="col-1-4">
+				<h3>Azkenengo Berria</h3>
+				<div class="mosaic-block circle">
+					<a href="{% url 'post' post.slug %}" class="mosaic-overlay link" title="{{post.izenburua}}"></a><div class="mosaic-backdrop">
+					<div class="corner date">{{post.data}}</div><img src="{{MEDIA_URL}}{{post.irudi_nagusia}}" alt="Mock" /></div>
+				</div>
+				<h6 class="title"><a href="{% url 'post' post.slug %}">{{post.izenburua}}</a></h6>
+				<p>{{ post.edukia|safe|slice:"72" }}
+				</p>&#8230; <a href="{% url 'post' post.slug %}" class="read-more">Gehiago</a>
+			</div>
+			
+			
+			<!-- Column -->
+			<div class="col-1-2 last">
+				<h3>Datozen hitzorduak</h3>
+				<ul class="widget-event-list">
+					{% for gertaera in gertaerak %}
+						<li>
+							<img class="left stay" src="{{MEDIA_URL}}{{gertaera.mota.irudia}}" alt="{{gertaera.mota.izena}}" />
+							<div class="date">{{gertaera.ordua}}</div>
+							<h6 class="title"><a href="{% url 'gertaera' gertaera.slug %}">{{gertaera.izena}}</a></h6>
+							<p>{{gertaera.textua|safe|slice:":255" }}
+							&#8230;<a href="{% url 'gertaera' gertaera.slug %}" class="read-more">Gehiago</a></p>
+						</li>
+
+					{% empty %}
+						<li><i>Ez dago hitzordurik</i></li>
+
+					{% endfor %}
+					
+				</ul>		
+			</div>
+			
+			
+		</div>
+	</div>
+        
+        <!-- Start Outter Wrapper -->
+	<div class="outter-wrapper divider"></div>
+	
+	<!-- Start Outter Wrapper -->	
+	<div class="outter-wrapper">
+        <div class="wrapper clearfix">
+                <div class="col-1-5 widget">
+                    <img src="{{STATIC_URL}}img/iragarkiak/arrikrutz.jpg" />
+                </div>
+
+                <div class="col-1-5 widget">
+                    <img src="{{STATIC_URL}}img/iragarkiak/caravanas.gif" />
+                </div>
+
+                <div class="col-1-5 widget">
+                    <img src="{{STATIC_URL}}img/iragarkiak/lgPoloGaraia.png" />
+                </div>
+
+                <div class="col-1-5 widget">
+                    <img src="{{STATIC_URL}}img/iragarkiak/magdalena.jpg" />
+                </div>
+
+		</div> 
+	</div>
+
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper divider"></div>
+	
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper centered paralax-block" style="background-image: url({{STATIC_URL}}img/parallax-bg2.jpg);" data-stellar-background-ratio="0.75">		
+		<div class="wrapper clearfix">
+			<blockquote>
+                “{{esaldi.esaldia}}”
+            {% if esaldi.egilea %}
+				<cite>{{esaldi.egilea}}</cite>
+			{% endif %}
+			</blockquote>
+		</div>
+	</div>
+
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper divider"></div>
+    	
+	<!-- Start Outter Wrapper -->
+	<div class="outter-wrapper">
+		<div class="wrapper ad-padx2 clearfix">
+		
+			<div class="clearfix">
+				<h3 class="left">2015eko Argazki Batzuk</h3>
+                
+    			<ul class="option-set right" id="filter" data-option-key="filter">
+    			 	<li><a href="#show-all" data-option-value="*" class="selected"><em class="fa">&#xf0c9;</em></a></li>
+    			 	<li><a href="#cat-1" data-option-value=".cat-1">Igerian</a></li>
+    			 	<li><a href="#cat-2" data-option-value=".cat-2">Bizikletan</a></li>
+                    <li><a href="#cat-2" data-option-value=".cat-3">Korrika</a></li>
+    			</ul>
+    		</div>	
+			
+			<!-- Start Isotope -->
+			<div class="col-1-1 thumb-gallery super-list variable-sizes clearfix" id="thumb-gallery">
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-3">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/goros.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Ander Gorostiaga Onditz Triatloian"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/goros.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-3">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/ainhize.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Ainhize Bilboko Akuatloian"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/ainhize.jpg" alt="Mock" /></div></div>
+    	   		</div>
+                
+                <!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-2">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/gabonirteera.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Gabonetan taldeak egindako ohiko irteera baten ondoren"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/gabonirteera.jpg" alt="Mock" /></div></div>
+    	   		</div>
+                
+                 <!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-3">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/igor.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Igor Donostiako Onditz Triatloian korrika"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/igor.jpg" alt="Mock" /></div></div>
+    	   		</div>
+                
+                <!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-3">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/joxe2.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Joxe Aranzadi Gasteizko Ironmanean helmugaratzen"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/joxe2.jpg" alt="Mock" /></div></div>
+    	   		</div>
+                
+                <!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-3">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/mikelru.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Mikel Ruiz Pasaiko triatloiko azken txanpan"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/mikelru.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-3">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/iban.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Iban Perez Senpereko Triatloian"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/iban.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-3">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/agiriano.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Aitor Agiriano Senpereko Triatloian"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/agiriano.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-2">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/andonic.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Andoni Correas Arbizuko Duatloian"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/andonic.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-2">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/mikelsolo.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Mikel Sologaistoa Zarautzeko Triatloian"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/mikelsolo.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/mikelr.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Mikel Ruiz Bilboko Triatloia amaitu ondoren"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/mikelr.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-1">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/aitaalaba.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Asier eta Ainhize Barrainkua Lekeitioko Triatloia hasi aurretik"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/aitaalaba.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/aisasti.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Argider Isasti bere alaba eta Soplaomaneko txapelarekin"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/aisasti.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/joxe.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Joxe Aranzadi Gasteizko Ironmana amaitu ondoren Javi Zelaiarekin batera"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/joxe.jpg" alt="Mock" /></div></div>
+    	   		</div>
+                
+                <!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/iisasti.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Iban Isasti XTerra Basque Country frogan"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/iisasti.jpg" alt="Mock" /></div></div>
+    	   		</div>
+                
+                <!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-2">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/unai.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Unai Pedregal Zarautzeko Triatloian"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/unai.jpg" alt="Mock" /></div></div>
+    	   		</div>
+                
+                <!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-2">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/antonio.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Antonio Ruesga Hondarribiko popularrean"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/antonio.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/susanaiker.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Susana Arrese eta Iker Sologaistoa 100x100 frogarako epaile lanetan"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/susanaiker.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-1">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/ehunbiderehun.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Gure taldeak antolatutako 100x100 froga amaitu ondorengo argazki bat parte hartzaile batzuekin"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/ehunbiderehun.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-2">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/mielin.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Mielin Oñatiko duatloian maldan gora burubelarri"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/mielin.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   		<!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-3">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/rege.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Iñigo Regueiro Oñatiko duatloko helmugara iristear"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/rege.jpg" alt="Mock" /></div></div>
+    	   		</div>
+                
+                 <!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-1">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/andonicor.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Andoni Debako triatloiko igeriketa sektorea amaitu berri"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/andonicor.jpg" alt="Mock" /></div></div>
+    	   		</div>
+                
+                <!-- Start Thumbnail -->
+    	   		<div class="col-1-5 element cat-1">
+    	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/ikersolo.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Iker Sologaistoa Getxoko triatloiko igeriketa amaitu berritan"></a>
+    	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/ikersolo.jpg" alt="Mock" /></div></div>
+    	   		</div>
+    	   		
+    	   </div>
+			
+		</div>
+	</div>
+{% endblock %}
