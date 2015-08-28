@@ -1,7 +1,8 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView,CreateView
 from gertaerak.models import Gertaera
 from esaldiak.models import Esaldi
 from bloga.models import Post
+from taldea.form import HarremanaForm
 # Create your views here.
 
 class Index(TemplateView):
@@ -27,6 +28,7 @@ class Taldea(TemplateView):
         context['postak'] = Post.objects.all().order_by('-data')[:3]
         return context
 
-class Harremana(TemplateView):
-
+class Harremana(CreateView):
+    form_class= "HarremanaForm"
     template_name = "harremana.html"
+    success_url = "bidalita"
