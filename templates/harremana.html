@@ -28,16 +28,13 @@
 	        	 
 	        	 
 	        	<!-- Start Form -->
-	        	<form id="contactform" action="php/processForm.php" method="post">
-	        		<table class="tableless">
-	        			<tr><td><input type="text" id="name" name="name" placeholder="Zure izena" /></td></tr>
-	        			<tr><td><input type="email" id="email" name="email" placeholder="Emaila" /></td></tr>
-	        			<tr><td><textarea id="message" name="message" rows="5" cols="20" placeholder="Zer kontatu nahi diguzu?"></textarea></td></tr>
-	        		</table>
-	        		
-	        		
-	        		<input name="button" class="btn-2" type="submit" value="Bidali mezua" id="send" />
-	        	</form>
+	        	<form method="post">
+				    {% csrf_token %}
+				    {{ form }}
+				    <div class="form-actions">
+				      <input name="button" class="btn-2" type="submit" value="Bidali mezua" id="send" />
+				    </div>
+				</form>
 	        	
 	        	
 	        	
@@ -45,8 +42,6 @@
 	              	                                                                                               
 				<!-- Finish Main Content -->
 	        </div>
-			
-			
 			
 	
 			<!-- Start Main Sidebar  -->

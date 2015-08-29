@@ -32,7 +32,8 @@ urlpatterns = [
     url(r'^egutegia/$', gertaera_views.Egutegia.as_view(),name="egutegia"),
     url(r'^egutegia/(?P<urtea>[\d]+)/(?P<hilabetea>[\d]+)$', gertaera_views.EgutegiaParam.as_view(),name="egutegiaparam"), 
     url(r'^harremana/$', taldea_views.Harremana.as_view(),name="harremana"),
+    url(r'^harremana/bidalita$', taldea_views.Bidalita.as_view(),name="bidalita"),
     url(r'^feed/$', LatestEntriesFeed(), name="feed"),
-    url(r'^admin/$', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^ckeditor/$', include('ckeditor.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

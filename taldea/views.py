@@ -29,6 +29,10 @@ class Taldea(TemplateView):
         return context
 
 class Harremana(CreateView):
-    form_class= "HarremanaForm"
+    form_class= HarremanaForm
     template_name = "harremana.html"
     success_url = "bidalita"
+
+
+class Bidalita(TemplateView):
+    template_name = "bidalita.html"
