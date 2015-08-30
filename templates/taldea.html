@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
+{% block opengraph %}
+<meta property="og:title" content="Aloña Mendi Triatloi Taldea" />
+<meta property="og:url" content="http://aloinatriatloi.org/taldea/" />
+<meta property="og:description" content="Oñatiko Triatloi Taldea bezela hasi genuen gure ibilbidea, eta gaur egun Aloña Mendiko sail baten bihurtu gara, bide berdinetik jarraitu ahal izateko" />
+<meta property="og:image" content="{{STATIC_URL}}img/taldea.jpg" />
+{% endblock %}
+
 {% block eduki_nagusia %}
 
 	<!-- Start Outter Wrapper -->

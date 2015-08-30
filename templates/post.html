@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
+{% block opengraph %}
+<meta property="og:title" content="{{post.izenburua}}" />
+<meta property="og:url" content="http://aloinatriatloi.org/berria/{{post.slug}}" />
+<meta property="og:description" content="{{ post.edukia|safe|slice:"72" }}" />
+<meta property="og:image" content="{{MEDIA_URL}}{{post.irudi_nagusia}}" />
+{% endblock %}
+
 {% block eduki_nagusia %}
 
     	
