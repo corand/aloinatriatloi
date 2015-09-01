@@ -12,7 +12,10 @@ class Index(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(Index, self).get_context_data(**kwargs)
         context['gertaerak'] = Gertaera.objects.all().order_by('-ordua')[:3]
-        context['post'] = Post.objects.latest('data')
+        try:
+	    context['post'] = Post.objects.latest('data')
+        except Post.DoesNotExist:
+            context['post'] = None
         context['esaldi'] = Esaldi.objects.order_by('?').first()
         return context
 
