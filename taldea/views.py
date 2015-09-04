@@ -3,6 +3,7 @@ from gertaerak.models import Gertaera
 from esaldiak.models import Esaldi
 from bloga.models import Post
 from taldea.form import HarremanaForm
+import datetime
 # Create your views here.
 
 class Index(TemplateView):
@@ -11,7 +12,10 @@ class Index(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(Index, self).get_context_data(**kwargs)
-        context['gertaerak'] = Gertaera.objects.all().order_by('-ordua')[:3]
+
+        orain = datetime.datetime.now()
+
+        context['gertaerak'] = Gertaera.objects.filter(ordua__lte=orain).order_by('ordua')[:3]
         try:
 	    context['post'] = Post.objects.latest('data')
         except Post.DoesNotExist:
