@@ -151,7 +151,7 @@
 			
 			<!-- Column -->
 			<div class="col-1-4">
-{% if post %}
+			{% if post %}
 				<h3>Azkenengo Berria</h3>
 				<div class="mosaic-block circle">
 					<a href="{% url 'post' post.slug %}" class="mosaic-overlay link" title="{{post.izenburua}}"></a><div class="mosaic-backdrop">
@@ -160,8 +160,8 @@
 				<h6 class="title"><a href="{% url 'post' post.slug %}">{{post.izenburua}}</a></h6>
 				<p>{{ post.edukia|safe|slice:"72" }}
 				</p>&#8230; <a href="{% url 'post' post.slug %}" class="read-more">Gehiago</a>
-{% endif %}			
- </div>
+			{% endif %}			
+ 			</div>
 			
 			
 			<!-- Column -->
@@ -347,7 +347,7 @@
     	   		</div>
 
     	   		<!-- Start Thumbnail -->
-    	   		<div class="col-1-5 element cat-2">
+    	   		<div class="col-1-5 element cat-1">
     	   			<div class="mosaic-block circle"><a href="{{STATIC_URL}}img/ehun.jpg" class="mosaic-overlay fancybox" data-fancybox-group="gallery" title="Ehun bider ehuneko taldekide gehienak"></a>
     	   			<div class="mosaic-backdrop"><img src="{{STATIC_URL}}img/ehun.jpg" alt="Mock" /></div></div>
     	   		</div>
