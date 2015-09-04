@@ -99,7 +99,7 @@ class EgutegiaParam(TemplateView):
             start = start + datetime.timedelta(days=1)
 
         cal = calendar.Calendar()
-        month_days = cal.itermonthdays(today.year, today.month)
+        month_days = cal.itermonthdays(urtea, hilabetea)
 
         dias = []
         for day in month_days:
