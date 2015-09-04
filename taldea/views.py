@@ -15,7 +15,7 @@ class Index(TemplateView):
 
         orain = datetime.datetime.now()
 
-        context['gertaerak'] = Gertaera.objects.filter(ordua__lte=orain).order_by('ordua')[:3]
+        context['gertaerak'] = Gertaera.objects.filter(ordua__lte=orain).order_by('-ordua')[:3]
         try:
 	    context['post'] = Post.objects.latest('data')
         except Post.DoesNotExist:
