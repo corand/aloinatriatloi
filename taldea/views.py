@@ -12,9 +12,7 @@ class Index(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(Index, self).get_context_data(**kwargs)
-
         orain = datetime.datetime.now()
-
         context['gertaerak'] = Gertaera.objects.filter(ordua__gte=orain).order_by('ordua')[:3]
         try:
 	    context['post'] = Post.objects.latest('data')
@@ -31,6 +29,7 @@ class Taldea(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(Taldea, self).get_context_data(**kwargs)
+        orain = datetime.datetime.now()
         context['gertaerak'] = Gertaera.objects.filter(ordua__gte=orain).order_by('ordua')[:3]
         context['postak'] = Post.objects.all().order_by('-data')[:3]
         return context
