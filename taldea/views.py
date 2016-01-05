@@ -42,3 +42,6 @@ class Harremana(CreateView):
 
 class Bidalita(TemplateView):
     template_name = "bidalita.html"
+
+class Laguntzaileak(TemplateView):
+    template_name = "laguntzaileak.html"

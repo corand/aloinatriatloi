@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^berria/(?P<slug>[-\w/]+)/$', bloga_views.PostView.as_view(), name="post"),
     url(r'^gertaera/(?P<slug>[-\w/]+)/$', gertaera_views.GertaeraView.as_view(), name="gertaera"),
     url(r'^egutegia/$', gertaera_views.Egutegia.as_view(),name="egutegia"),
+    url(r'^laguntzaileak/$', taldea_views.Laguntzaileak.as_view(),name="laguntzaileak"),
     url(r'^egutegia/(?P<urtea>[\d]+)/(?P<hilabetea>[\d]+)$', gertaera_views.EgutegiaParam.as_view(),name="egutegiaparam"), 
     url(r'^harremana/$', taldea_views.Harremana.as_view(),name="harremana"),
     url(r'^harremana/bidalita$', taldea_views.Bidalita.as_view(),name="bidalita"),

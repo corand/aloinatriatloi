@@ -1,3 +1,10 @@
 .header-area a:hover, .sport-rs-heading div, .header-area .megamenu_container .megamenu a:hover, .header-area .megamenu_container .megamenu li .dropdown_container h3.mega-title, .header-area .megamenu_container .megamenu li .dropdown_fullwidth h3.mega-title {
 color: darkblue;
 }
+
+.postiragarkia{
+	margin:0;
+	text-align: center;
+}
+
+.postiragarkia img{ max-width: 250px;}
