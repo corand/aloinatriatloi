@@ -14,10 +14,11 @@ class Post(models.Model):
     irudi_nagusia = models.ImageField()
 
     def save(self):
-        date = datetime.date.today()
-        self.slug = '%i/%i/%i/%s' % (
-            date.year, date.month, date.day, slugify(self.izenburua)
-        )
+        if not self.id:
+            date = datetime.date.today()
+            self.slug = '%i/%i/%i/%s' % (
+                date.year, date.month, date.day, slugify(self.izenburua)
+            )
         super(Post, self).save()
 
     def get_next(self):
